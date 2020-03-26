@@ -12,6 +12,9 @@ import { RegisterComponent } from './login/register.component';
 // modulos
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
+import { FormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     PagesModule,
     SharedModule,
+    FormsModule,
     APP_ROUTES
   ],
   providers: [],
