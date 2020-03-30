@@ -1,18 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-// rutas
+// Rutas
 import { APP_ROUTES } from './app.routes';
 
+// Modulos
+import { PagesModule } from './pages/pages.module';
+
+// temporal
+import { FormsModule } from '@angular/forms';
+
+// Servicios
+import { ServiceModule } from './services/service.module';
+
+
+
+
+// Componentes
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { PagesComponent } from './pages/pages.component';
 import { RegisterComponent } from './login/register.component';
-
-// modulos
-import { PagesModule } from './pages/pages.module';
-import { SharedModule } from './shared/shared.module';
-import { FormsModule } from '@angular/forms';
 
 
 
@@ -20,15 +27,14 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     LoginComponent,
-    PagesComponent,
     RegisterComponent
   ],
   imports: [
     BrowserModule,
+    APP_ROUTES,
     PagesModule,
-    SharedModule,
     FormsModule,
-    APP_ROUTES
+    ServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
